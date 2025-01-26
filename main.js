@@ -67,7 +67,13 @@ const squadre = [
 let arrayNomiEFalli = [];
 
 for(const x in squadre){
-    arrayNomiEFalli.push( squadre[x].falliSubiti, squadre[x].nome )
+    let elemento = squadre[x]
+    arrayNomiEFalli.push(
+         {
+            nome: elemento["nome"],
+            falliSubiti: elemento["falliSubiti"]
+         }
+        )
 }
 
 console.log(arrayNomiEFalli)
